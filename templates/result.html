@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Prediction Result for {{ race }} Race</h1>
+        <div class="text-center">
+            <img src="{{ prediction_img_tag }}" class="img-fluid" alt="Prediction Result">
+        </div>
+        <div class="text-center my-4">
+            <img src="{{ actual_vs_predicted_img_tag }}" class="img-fluid" alt="Actual vs Predicted Values">
+        </div>
+        <div class="text-center my-4">
+            <p>Predicted Feature Value: {{ prediction }}</p>
+            <p>Closest Ethnic Prediction: {{ closest_ethnicity }}</p>
+            <p>Ethnicity Predictions:</p>
+            <ul>
+                <li>Malay: {{ ethnicity_predictions['Malay'] }}</li>
+                <li>Indian: {{ ethnicity_predictions['Indian'] }}</li>
+                <li>Chinese: {{ ethnicity_predictions['Chinese'] }}</li>
+            </ul>
+            <a href="/" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
